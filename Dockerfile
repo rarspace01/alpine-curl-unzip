@@ -1,2 +1,2 @@
 FROM alpine:latest
-RUN apk install unzip curl
+RUN apk add unzip curl
