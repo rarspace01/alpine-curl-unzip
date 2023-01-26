@@ -11,6 +11,8 @@ name: build and publish to Dockerhub
 
 on:
   push:
+  schedule:
+  - cron: '35 0 * * *'
 
 jobs:
   push_to_registry:
