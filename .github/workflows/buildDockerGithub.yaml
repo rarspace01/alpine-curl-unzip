@@ -1,6 +1,9 @@
 name: build and publish to GCR
 
-on: [push]
+on:
+  push:
+  schedule:
+  - cron: '35 0 * * *'
 
 jobs:
   publish-alpine-curl-unzip:
