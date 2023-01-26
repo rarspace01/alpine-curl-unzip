@@ -16,5 +16,4 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.CR_TOKEN }}
     - run: docker buildx create --name mybuilder --driver docker-container --bootstrap --use
-    - run: docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 . --tag ghcr.io/rarspace01/alpine-curl-unzip:latest
-    - run: docker buildx push ghcr.io/rarspace01/alpine-curl-unzip:latest
+    - run: docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 . --tag ghcr.io/rarspace01/alpine-curl-unzip:latest --push
